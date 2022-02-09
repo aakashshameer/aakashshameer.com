@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>aakashshameer.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20ec19e088.js" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body>
+    <section class ="sub-header" id="sub-header"> 
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="resume.html">RESUME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>aakashshameer.com</h1>
+    </section>
+
+    <!----- contact page------>
+
+    <section class="contact-page" id="contact-page">
+        <h1>Contact Me!</h1>
+        <p></p> 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d85994.01110926562!2d-122.32874657689385!3d47.658918559635644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549014929d8535eb%3A0x6b742c7901b82ba3!2sUniversity%20of%20Washington!5e0!3m2!1sen!2sus!4v1644400757433!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        
+
+    </section>
+    <section class="contact-me">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <a href="https://www.linkedin.com/in/aakash-shameer-srazali-944102195" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <span>
+                        <h5>Aakash Shameer bin Srazali</h5>
+                        <p>Connect with Me on LinkedIn!</p>
+                    </span>
+                </div>
+                <div>
+                    <a href="https://github.com/aakashshameer" target="_blank"><i class="fab fa-github"></i></a>
+                    <span>
+                        <h5>aakashshameer</h5>
+                        <p>View my current and upcoming projects on Github!</p>
+                    </span>
+                </div>
+                <div>
+                    <a href="mailto:aaksra@cs.washington.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <span>
+                        <h5>aaksra@cs.washington.edu</h5>
+                        <p>Feel free to email any enquiries!</p>
+                
+                    </span>
+                </div>
+                
+            </div>
+            
+            <div class="contact-col">
+                <form action="/contact.html" method="post" data-netlify="true">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="email" name="email" placeholder="Enter your email address" required>
+                    <input type="text" name="subject" placeholder="Enter your subject" required>
+                    <textarea rows="8" name="message" placeholder="Message"></textarea>
+                    <button type="submit" class= "hero-btn">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+
+  
+    <!---- Footer----->
+    <section class="footer" id="footer">
+        <a href="#sub-header" class="hero-btn">BACK TO TOP</a>
+        <h4>Connect With Me !</h4>
+        <div class="icons">
+            <a href="https://www.facebook.com/aakashshameer.srazali" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/aakashshameer/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/aakash-shameer-srazali-944102195" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/aakashshameer" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:aaksra@cs.washington.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+       <p> <i class="fa fa-copyright"></i> Made by Aakash Shameer bin Srazali, 2021.</p>
+        
+    </section>
+    <!---- JavaScript for Toggle Menu----->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+            
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>

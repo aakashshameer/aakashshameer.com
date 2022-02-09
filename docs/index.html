@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>aakashshameer.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20ec19e088.js" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body>
+    <section class ="header" id="header"> 
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="resume.html">RESUME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>aakashshameer.com</h1>
+            <p>Welcome to my landing page where I will showcase all of my resume along with<br> my projects, codes and hobbies.</p>
+            <a href="#about" class="hero-btn"><i class="fas fa-chevron-down"></i></a>
+            
+        </div>
+
+        <div class="location">  
+            <p><a href="https://www.engr.washington.edu/about/bldgs/cse2" target="_blank"><i class="fas fa-map-marker-alt"></i></a> Bill Gates and Medlinda Gates Center,<br> University of Washington</p>
+        </div>
+
+    </section>
+
+    <!---- About ----->
+    <section class="about" id="about">
+        <h1>About Me</h1>
+        <img src="images/about.png">
+        <p>My name is Aakash. I am a Junior at the <b>University of Washington</b>  studying <b>Computer Science</b>.
+            I made <b><i>aakashshameer.com </i></b>  as a landing page where I can showcase my portfolio, resume and any projects that I am up to. 
+            <br> <br>
+            For as long as I can remember, I have always had a very special bond with technology. I find it enthralling to discover, 
+            explore and learn about the latest technological improvement. Often, I am also relied upon by family and friends to explore these gadgets 
+            and consult them on their inquiries and purchases. I can say with a degree of certainty that the responsibility has ironically
+            corroborated my passion for technology. I wish for a career where I have the power to use and develop new technologies 
+            to improve communities and to see an impactful change in the real world in terms of productivity and efficiency.
+            <br> <br>
+            I am currently looking for Software Engineering Internship for 2022!
+        </p>
+        <a href="about.html" class="hero-btn">CLICK HERE TO LEARN MORE ABOUT ME</a>
+    </section>
+    
+
+
+    <!---- Call To Action----->
+    <section class="cta">
+        <h1>More updates coming soon!</h1>
+        <!---<a href="" class="hero-btn">CLICK HERE!</a> ---->
+    </section>
+
+    <!---- Footer----->
+    <section class="footer" id="footer">
+        <a href="#header" class="hero-btn">BACK TO TOP</a>
+        <h4>Connect With Me !</h4>
+        <div class="icons">
+            <a href="https://www.facebook.com/aakashshameer.srazali" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/aakashshameer/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/aakash-shameer-srazali-944102195" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/aakashshameer" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:aaksra@cs.washington.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+       <p> <i class="fa fa-copyright"></i> Made by Aakash Shameer bin Srazali, 2021.</p>
+        
+    </section>
+    <!---- JavaScript for Toggle Menu----->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>aakashshameer.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20ec19e088.js" crossorigin="anonymous"></script>
+    
+    
+</head>
+<body>
+    <section class ="sub-header" id="sub-header"> 
+        <nav>
+            <a href="index.html"><img src="images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="resume.html">RESUME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>aakashshameer.com</h1>
+    </section>
+
+    <!------ Resume ------->
+    <section class="resume-page" id="resume-page">
+        <h1>Resume</h1>
+        <p> Here is my resume showcasing my education, skills, coursework, projects, work and volunteering experiences in my college journey.</p> 
+
+
+        <iframe src="resume_updated.pdf" frameBorder="0" scrolling="auto" style="height:700px;width:100%;"></iframe>
+
+    </section>
+
+  
+    <!---- Footer----->
+    <section class="footer" id="footer">
+        <a href="#sub-header" class="hero-btn">BACK TO TOP</a>
+        <h4>Connect With Me !</h4>
+        <div class="icons">
+            <a href="https://www.facebook.com/aakashshameer.srazali" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/aakashshameer/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/aakash-shameer-srazali-944102195" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/aakashshameer" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:aaksra@cs.washington.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+       <p> <i class="fa fa-copyright"></i> Made by Aakash Shameer bin Srazali, 2021.</p>
+        
+    </section>
+    <!---- JavaScript for Toggle Menu----->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>
