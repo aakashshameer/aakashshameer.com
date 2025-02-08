@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff66b2; /* Pink background */
+    font-family: "Pixelify Sans", sans-serif;
+    text-align: center;
+    background-image: url('https://www.transparenttextures.com/patterns/purty-woods.png'); /* Pixelated background texture */
+    background-size: 50px 50px; /* Adjust the pixel size */
+    animation: backgroundAnimation 5s infinite alternate; /* Background animation */
+}
+
+.container {
+    background-color: rgb(234, 158, 211);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    font-family: "Pixelify Sans", sans-serif;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition on hover */
+    animation: buttonMove 2s infinite alternate; /* Button floating effect */
+}
+
+#yesButton {
+    background-color: #28a745;
+    color: white;
+}
+
+#noButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+#noButton:hover {
+    background-color: #c82333;
+}
+
+/* Style for the pop-up message */
+#message {
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: green;
+    background-color: white;
+    padding: 10px 20px;
+    border: 2px solid green;
+    border-radius: 5px;
+    animation: messagePopUp 1.5s ease-out;
+}
+
+
+/* Assuming you have imported the "Pixelify Sans" font somewhere, e.g., via @font-face or Google Fonts */
+.pixelify-sans-custom {
+    font-family: "Pixelify Sans", sans-serif; /* Assuming you have loaded it from Google Fonts */
+    font-optical-sizing: auto;
+    font-weight: 400; /* or 700 for bold */
+    font-style: normal;
+}
+

@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+:root {
+    --angle: 4deg;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-section {
+    width: 40%;
+    background: #1f1f1f;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-section h1 {
+    font-size: 3rem;
+    background: -webkit-linear-gradient(#6713a3, #0b3ee7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.left-section p {
+    font-size: 1.25rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: #0b3ee7;
+}
+
+.right-section {
+    width: 60%;
+    background: #f4f4f4;
+    padding: 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.right-section .about {
+    padding-bottom: 20px;
+}
+
+.right-section h1,
+.right-section h2 {
+    font-size: 2rem;
+}
+
+.right-section p {
+    font-size: 1.25rem;
+    line-height: 2;
+}
+
+.no-highlight {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.word-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+.word {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+    font-family: "Ubuntu";
+    font-size: 5rem;
+    font-weight: 900;
+    color: var(--color, #fff);
+    display: flex;
+    pointer-events: none;
+    user-select: none;
+    line-height: 5.8rem;
+}
+
+.char {
+    position: relative;
+    -webkit-text-stroke: 1px #000;
+    transform: translateY(0%) rotate(var(--angle));
+    animation: up-and-down 2s ease infinite;
+    animation-delay: calc((var(--word-index) * -0.15s) + (var(--char-index) * 0.1s));
+    z-index: calc(-1 * var(--char-index));
+    margin-left: -0.8rem;
+}
+
+@keyframes up-and-down {
+    0%,
+    100% {
+        transform: translateY(0%) rotate(var(--angle));
+    }
+    50% {
+        transform: translateY(30%) rotate(var(--angle));
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+        transform: translate(-50%, -50%) rotate(-5deg);
+    }
+    75% {
+        transform: translate(-50%, -50%) rotate(5deg);
+    }
+}
+
+mark {
+    --color1: springgreen;
+    --color2: springgreen;
+    --bg-height: 40%;
+      
+    all: unset;
+    background-image: linear-gradient(var(--color1), var(--color2));
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 var(--bg-height);
+    animation: highlight 800ms 1 ease-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+@keyframes highlight {
+    to {
+        background-size: 100% var(--bg-height);
+    }
+}
+
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip::after {
+    content: attr(data-full);
+    position: absolute;
+    left: 50%;
+    bottom: 125%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+}
+details {
+    user-select: none;
+    margin-top: 10px;
+}
+
+details > summary {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    font-size: 1.25rem;
+    color: #333;
+    padding: 5px 0;
+}
+
+details > summary .icon {
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+details[open] > summary .icon {
+    transform: rotate(90deg);
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details .collapsible-content {
+    padding-left: 20px;
+    list-style-type: none; /* Remove default bullets */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+
+details[open] .collapsible-content {
+    max-height: 1000px; /* Arbitrary large value to ensure the content expands */
+    opacity: 1;
+}
+
+details .collapsible-content > li {
+    padding-left: 20px;
+    padding: 5px 0;
+}
+
+details .collapsible-content > li::before {
+    content: "•";
+    color: #333;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
