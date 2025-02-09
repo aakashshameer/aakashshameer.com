@@ -1,4 +1,6 @@
 const noButton = document.getElementById('noButton');
+const yesButton = document.getElementById('yesButton');
+const message = document.getElementById('message');
 
 noButton.addEventListener('mouseover', (event) => {
     // Get the dimensions of the button and the window
@@ -6,6 +8,13 @@ noButton.addEventListener('mouseover', (event) => {
     const buttonHeight = noButton.offsetHeight;
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
+
+    message.style.display = 'block';  // Make the message visible
+    message.innerHTML = 'Unlucky';  // Change the message content
+
+    setTimeout(() => {
+        message.style.display = 'none';
+    }, 1000);
 
     // Increase the range of random offsets for more dramatic movement
     const randomOffsetX = Math.floor(Math.random() * 800) - 400; // Random number between -400 and 400
@@ -44,16 +53,29 @@ noButton.addEventListener('mouseover', (event) => {
     noButton.style.top = `${newY}px`;
 });
 
+noButton.addEventListener('click', () => {
 
-const yesButton = document.getElementById('yesButton');
-const message = document.getElementById('message');
+    message.style.display = 'block';  // Make the message visible
+    message.innerHTML = 'Ala takle';  // Change the message content
+
+
+});
 
 yesButton.addEventListener('click', () => {
     // Display the message when Yes is clicked
     message.style.display = 'block';  // Make the message visible
-    message.innerHTML = 'Okay thank you!❤️';  // Change the message content
+    message.innerHTML = 'Love you!❤️';  // Change the message content
 
     setTimeout(() => {
-        message.style.display = 'none';  // Hide the message
-    }, 1000);  // 3000 milliseconds = 3 seconds
+       // message.style.display = 'none';  // Hide the message
+       message.innerHTML = 'Balik cepat pls';  // Change the message content
+    }, 1500);  // 3000 milliseconds = 3 seconds
+
+    setTimeout(() => {
+        message.innerHTML = 'I miss you';
+    }, 3000);
+
+    setTimeout(() => {
+        message.style.display = 'none';
+    }, 5000);
 });
