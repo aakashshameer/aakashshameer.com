@@ -59,7 +59,7 @@ button {
 #message {
     display: none;
     position: absolute;
-    top: 60%;
+    top: 80%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 24px;
@@ -78,5 +78,12 @@ button {
     font-optical-sizing: auto;
     font-weight: 400; /* or 700 for bold */
     font-style: normal;
+}
+
+.cute-gif {
+    width: 200px; /* Adjust width as needed */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centers the GIF */
 }
 
